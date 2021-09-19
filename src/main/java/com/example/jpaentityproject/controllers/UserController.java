@@ -1,6 +1,6 @@
 package com.example.jpaentityproject.controllers;
 
-import com.example.jpaentityproject.services.UserService;
+import com.example.jpaentityproject.services.UserSv;
 import com.example.jpaentityproject.task.dto.UserDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class UserController {
 
-    private final UserService userService;
+    private final UserSv userSv;
 
     @PostMapping("/insert")
     public UserDTO insertUser(@RequestBody UserDTO userDTO){
-        return userService.userSetInsert(userDTO);
+        return userSv.userSetInsert(userDTO);
     }
 
 }
