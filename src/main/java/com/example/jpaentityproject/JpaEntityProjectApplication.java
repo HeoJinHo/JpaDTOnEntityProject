@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JpaEntityProjectApplication {
 
     public static void main(String[] args) {
+        System.out.println("test1");
         SpringApplication.run(JpaEntityProjectApplication.class, args);
     }
 
